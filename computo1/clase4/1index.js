@@ -12,13 +12,13 @@ const NewUser = () => {
                 if (age >= 18) {
                     console.log(`your fullname is : ${name} ${middlename} your age is ${age}`)
                     console.log("youre age is hight")
-                    interfaz.close()
+                    return NewUser()
                     
                 }else{
                     console.log(`your fullname is : ${name} ${middlename} your age is ${age}`)
                     console.log("you are age is low");
                     
-                    interfaz.close()
+                    return NewUser()
                 }
                 
             })
