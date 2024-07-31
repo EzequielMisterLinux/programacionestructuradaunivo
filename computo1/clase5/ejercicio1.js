@@ -6,7 +6,13 @@ const interfaz = leerlinea.createInterface(
 )
 
 const Sumar = (num1, num2) => {
-    return num1 + num2
+
+    if (isNaN(num1)|| isNaN(num2)) {
+        console.log("porfavor ingrese datos numericos");
+    } else {
+        return num1 + num2
+    }
+
 }
 
 
@@ -27,6 +33,7 @@ const Operacion = () => {
     interfaz.question("ingrese su operacion \n1:sumar \n2:restar \n3:multiplicar \n4:dividir\n5:salir\n", (operation) => {
         if (operation == 1) {
             interfaz.question("porfavor ingrese el primer numero: ", (num1) => {
+
                 interfaz.question("porfavor ingrese el segundo numero: ", (num2) => {
                     const n1 = parseFloat(num1)
                     const n2 = parseFloat(num2)
